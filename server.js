@@ -8,7 +8,15 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+app.get('/artical-one',function(req,res){
+    res.send("Article one requsted and will be serverd here")
+})
+app.get('/artical-two',function(req,res){
+    res.send("Article two requsted and will be serverd here")
+})
+app.get('/artical-three',function(req,res){
+    res.send("Article three requsted and will be serverd here")
+})
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -25,3 +33,4 @@ var port = 80;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+
