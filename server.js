@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articleone = {
-    title: 'aritcle-one|surya',
+    title: 'article-one|surya',
     heading: 'article-one',
     date: 'sep 05 2016',
     content: `  <p>
@@ -19,6 +19,7 @@ var articleone = {
                                     This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
                                 </p>`
 };
+
 function createTamplate(data)
 {
     var title=data.title;
