@@ -22,10 +22,11 @@ var articleone = {
 
 function createTemplate(data)
 {
-    var title=data.title;
-    var heading=data.heading;
-    var date=data.date;
-    var content=data.content;
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+    
 var htmlTemplate = `
 <html>
     <head>
@@ -59,6 +60,13 @@ return htmlTemplate;
 
 app.get('/article-one', function (req, res) {
   res.send(createTemplate(articleone));
+});
+app.get('/article-two', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+});
+
+app.get('/article-three', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
 });
 
 app.get('/', function (req, res) {
