@@ -27,7 +27,6 @@ function createTamplate(data)
     var heading=data.heading;
     var date=data.date;
     var content=data.content;
-    
 var htmlTemplate = `
 <html>
     <head>
@@ -56,7 +55,7 @@ var htmlTemplate = `
             </body>
 </html>
 `;
-return htmlTamplate;
+return htmlTemplate;
 }
 
 app.get('/article-one', function (req, res) {
