@@ -20,7 +20,7 @@ var articleone = {
                                 </p>`
 };
 
-function createTamplate(data)
+function createTemplate(data)
 {
     var title=data.title;
     var heading=data.heading;
@@ -57,8 +57,8 @@ var htmlTemplate = `
 return htmlTemplate;
 }
 
-app.get('/articleone', function (req, res) {
-  res.send(createTamplate(articleone));
+app.get('/article-one', function (req, res) {
+  res.send(createTemplate(articleone));
 });
 
 app.get('/', function (req, res) {
